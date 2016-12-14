@@ -1,4 +1,8 @@
-﻿using System;
+﻿/**
+ * @author Benjamim Chambule <benchambule@gmail.com>
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,33 +17,33 @@ namespace org.bantu.components
         public String Value { get; set; }
         public String TargetWindow { get; set; }
         public String Index { get; set; }
+    }
 
-        public static class Builder
+    public class MenuItemBuilder
+    {
+        private MenuItem menuItem = new MenuItem();
+
+        public MenuItemBuilder withValue(String value)
         {
-            private MenuItem menuItem = new MenuItem();
+            menuItem.Value = value;
+            return this;
+        }
 
-            public Builder withValue(String value)
-            {
-                menuItem.Value = value;
-                return this;
-            }
+        public MenuItemBuilder withDescription(String description)
+        {
+            menuItem.Description = description;
+            return this;
+        }
 
-            public Builder withDescription(String description)
-            {
-                menuItem.Description = description;
-                return this;
-            }
+        public MenuItemBuilder withTargetWindow(String targetWindow)
+        {
+            menuItem.TargetWindow = targetWindow;
+            return this;
+        }
 
-            public Builder withTargetWindow(String targetWindow)
-            {
-                menuItem.TargetWindow = targetWindow;
-                return this;
-            }
-
-            public MenuItem build()
-            {
-                return menuItem;
-            }
+        public MenuItem build()
+        {
+            return menuItem;
         }
     }
 }

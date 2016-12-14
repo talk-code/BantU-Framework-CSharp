@@ -1,4 +1,8 @@
-﻿using System;
+﻿/**
+ * @author Benjamim Chambule <benchambule@gmail.com>
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,8 +38,8 @@ namespace org.bantu.interfaces
         IUSSDRequest newTimeoutRequest();
         IUSSDRequest newReleaseRequest();
 
-        SessionProvider getSessionProvider();
-        void setSessionProvider(SessionProvider provider);
+        ISessionProvider getSessionProvider();
+        void setSessionProvider(ISessionProvider provider);
 
         List<String> getBaseCodes();
         void activateBaseCode(String code);

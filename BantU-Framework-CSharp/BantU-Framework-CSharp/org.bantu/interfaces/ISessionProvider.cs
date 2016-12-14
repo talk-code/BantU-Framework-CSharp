@@ -9,8 +9,8 @@ using System.Text;
 
 namespace org.bantu.interfaces
 {
-    public interface IUSSDProcessor
+    public interface ISessionProvider
     {
-        void process(IUSSDRequest request, IUSSDSession<Object> session, IUSSDResponse response);
+        IUSSDSession<Object> getSession(IUSSDRequest request);
     }
 }

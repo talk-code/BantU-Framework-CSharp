@@ -40,8 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="org.bantu\components\Header.cs" />
+    <Compile Include="org.bantu\components\Input.cs" />
+    <Compile Include="org.bantu\components\MenuItem.cs" />
+    <Compile Include="org.bantu\components\Message.cs" />
+    <Compile Include="org.bantu\components\Service.cs" />
+    <Compile Include="org.bantu\components\Window.cs" />
+    <Compile Include="org.bantu\interfaces\IBaseCodeRequest.cs" />
     <Compile Include="org.bantu\interfaces\IIdentifiable.cs" />
+    <Compile Include="org.bantu\interfaces\IMenuItemsProvider.cs" />
     <Compile Include="org.bantu\interfaces\IRenderableItem.cs" />
+    <Compile Include="org.bantu\interfaces\ISessionProvider.cs" />
+    <Compile Include="org.bantu\interfaces\IUSSDApplication.cs" />
+    <Compile Include="org.bantu\interfaces\IUSSDFilter.cs" />
+    <Compile Include="org.bantu\interfaces\IUSSDFilteringChain.cs" />
+    <Compile Include="org.bantu\interfaces\IUSSDProcessor.cs" />
     <Compile Include="org.bantu\interfaces\IUSSDRequest.cs" />
     <Compile Include="org.bantu\interfaces\IUSSDResponse.cs" />
     <Compile Include="org.bantu\interfaces\IUSSDSession.cs" />

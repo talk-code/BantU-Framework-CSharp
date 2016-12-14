@@ -1,11 +1,11 @@
-﻿using System;
+﻿/**
+ * @author Benjamim Chambule <benchambule@gmail.com>
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
-/**
- * @author Benjamim Chambule <benchambule@gmail.com>
- */
 
 namespace org.bantu.interfaces
 {
@@ -13,9 +13,9 @@ namespace org.bantu.interfaces
     {
         String getId();
 
-        void setId();
+        void setId(String id);
 
-        void setTag();
+        void setTag(String tag);
 
         String getTag();
     }

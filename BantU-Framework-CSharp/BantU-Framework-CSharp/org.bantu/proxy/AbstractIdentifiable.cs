@@ -1,11 +1,11 @@
-﻿using System;
+﻿/**
+ * @author Benjamim Chambule <benchambule@gmail.com>
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
-/**
- * @author Benjamim Chambule <benchambule@gmail.com>
- */
 
 namespace org.bantu.proxy
 {
@@ -41,7 +41,7 @@ namespace org.bantu.proxy
             return id;
         }
 
-        public String Tag()
+        public String getTag()
         {
             return tag;
         }
