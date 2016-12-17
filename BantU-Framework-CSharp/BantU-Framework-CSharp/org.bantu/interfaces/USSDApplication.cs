@@ -11,17 +11,17 @@ namespace org.bantu.interfaces
 {
     using org.bantu.components;
 
-    public interface IUSSDApplication
+    public interface USSDApplication
     {
-        void addWindowFilter(String windowName, IUSSDFilter filter);
+        void addWindowFilter(String windowName, USSDFilter filter);
 
-        void addFilter(IUSSDFilter filter);
+        void addFilter(USSDFilter filter);
 
         void addWindow(Window window);
 
-        List<IUSSDFilter> getWindowFilters(String windowName);
+        List<USSDFilter> getWindowFilters(String windowName);
 
-        List<IUSSDFilter> getFilters();
+        List<USSDFilter> getFilters();
 
         void addService(Service service);
         List<Service> getServices();
@@ -34,12 +34,12 @@ namespace org.bantu.interfaces
 
         Window getWindow(String windowId);
 
-        IUSSDRequest newRequest(String str);
-        IUSSDRequest newTimeoutRequest();
-        IUSSDRequest newReleaseRequest();
+        USSDRequest newRequest(String str);
+        USSDRequest newTimeoutRequest();
+        USSDRequest newReleaseRequest();
 
-        ISessionProvider getSessionProvider();
-        void setSessionProvider(ISessionProvider provider);
+        SessionProvider getSessionProvider();
+        void setSessionProvider(SessionProvider provider);
 
         List<String> getBaseCodes();
         void activateBaseCode(String code);

@@ -9,8 +9,8 @@ using System.Text;
 
 namespace org.bantu.interfaces
 {
-    public interface ISessionProvider
+    public interface SessionProvider
     {
-        IUSSDSession<Object> getSession(IUSSDRequest request);
+        USSDSession<Object> getSession(USSDRequest request);
     }
 }

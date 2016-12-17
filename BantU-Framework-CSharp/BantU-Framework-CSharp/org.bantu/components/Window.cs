@@ -18,8 +18,8 @@ namespace org.bantu.components
         private Input input;
         private List<MenuItem> menuItems = new List<MenuItem>();
         private String menuValueName;
-        private IUSSDProcessor processor;
-        private List<IMenuItemsProvider> menuItemsProvider = new List<IMenuItemsProvider>();
+        private USSDProcessor processor;
+        private List<MenuItemsProvider> menuItemsProvider = new List<MenuItemsProvider>();
         private List<Message> messages = new List<Message>();
 
         public Window()

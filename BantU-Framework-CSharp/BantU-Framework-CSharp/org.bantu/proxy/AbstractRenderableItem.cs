@@ -11,7 +11,7 @@ namespace org.bantu.proxy
 {
     using org.bantu.interfaces;
 
-    public abstract class AbstractRenderableItem : AbstractIdentifiable, IRenderableItem
+    public abstract class AbstractRenderableItem : AbstractIdentifiable, RenderableItem
     {
         private bool render = true;
 

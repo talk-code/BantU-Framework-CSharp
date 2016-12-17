@@ -9,9 +9,14 @@ using System.Text;
 
 namespace org.bantu.interfaces
 {
-    using org.bantu.components;
-    public interface IMenuItemsProvider
+    public interface Identifiable
     {
-        List<MenuItem> getMenuItems(String windowName, IUSSDRequest request, IUSSDSession<Object> session);
+        String getId();
+
+        void setId(String id);
+
+        void setTag(String tag);
+
+        String getTag();
     }
 }

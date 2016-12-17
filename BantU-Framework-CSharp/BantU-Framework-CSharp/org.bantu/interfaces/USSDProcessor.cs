@@ -9,9 +9,8 @@ using System.Text;
 
 namespace org.bantu.interfaces
 {
-    public interface IBaseCodeRequest: IUSSDRequest
+    public interface USSDProcessor
     {
-        String getUSSDBaseCode();
-        void setUSSDBaseCode(String code);
+        void process(USSDRequest request, USSDSession<Object> session, USSDResponse response);
     }
 }

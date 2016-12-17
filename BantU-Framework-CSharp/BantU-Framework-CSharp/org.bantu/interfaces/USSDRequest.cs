@@ -9,7 +9,7 @@ using System.Text;
 
 namespace org.bantu.interfaces
 {
-    public interface IUSSDRequest
+    public interface USSDRequest
     {
         String getMSISDN();
         void setMSIDN(String MSISDN);

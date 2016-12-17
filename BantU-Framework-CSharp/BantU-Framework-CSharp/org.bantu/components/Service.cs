@@ -16,7 +16,7 @@ namespace org.bantu.components
         public String Id { get; set; }
         public String Description { get; set; }
         public String matchPattern { get; set; }
-        public IUSSDProcessor processor { get; set; }
+        public USSDProcessor processor { get; set; }
 
         public String getRegularExpression()
         {

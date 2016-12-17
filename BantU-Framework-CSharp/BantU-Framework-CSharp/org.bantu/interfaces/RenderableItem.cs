@@ -9,8 +9,11 @@ using System.Text;
 
 namespace org.bantu.interfaces
 {
-    public interface IUSSDFilter
+    public interface RenderableItem
     {
-        void doFilter(IUSSDRequest request, IUSSDSession<Object> session, IUSSDResponse response, IUSSDFilteringChain execution);
+        void setRender(bool value);
+        bool isHidden();
+        void hide();
+        void show();
     }
 }

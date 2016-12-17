@@ -11,7 +11,7 @@ namespace org.bantu.proxy
 {
     using org.bantu.interfaces;
 
-    public abstract class AbstractIdentifiable: IIdentifiable
+    public abstract class AbstractIdentifiable: Identifiable
     {
         private String id;
 

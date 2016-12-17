@@ -9,9 +9,9 @@ using System.Text;
 
 namespace org.bantu.interfaces
 {
-    public interface IUSSDFilteringChain
+    public interface USSDFilteringChain
     {
-        void proceed(IUSSDRequest request, IUSSDSession<Object> USSDSession, IUSSDResponse response);
-        void appendFilter(IUSSDFilter filter);
+        void proceed(USSDRequest request, USSDSession<Object> USSDSession, USSDResponse response);
+        void appendFilter(USSDFilter filter);
     }
 }
