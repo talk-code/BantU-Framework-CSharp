@@ -5,9 +5,8 @@ using System.Text;
 
 namespace org.bantu
 {
-    public interface PostRequest: USSDRequest
+    class BaseUSSDFilteringChain: USSDFilteringChain
     {
-        String getInputValue();
-        void setInputValue(String inputValue);
+
     }
 }

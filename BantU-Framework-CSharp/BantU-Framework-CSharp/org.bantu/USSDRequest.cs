@@ -26,10 +26,10 @@ namespace org.bantu
         void setAttachment(Object attachment);
         Object getAttachment();
 
-        //void redirectTo(String windowName, USSDSession session, USSDResponse response);
+        void redirectTo(String windowName, USSDSession<Type> session, USSDResponse response);
 
-        //void setApplication(USSDApplication application);
+        void setApplication(USSDApplication application);
 
-        //USSDApplication getApplication();
+        USSDApplication getApplication();
     }
 }

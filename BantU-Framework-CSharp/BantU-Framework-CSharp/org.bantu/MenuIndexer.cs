@@ -5,9 +5,8 @@ using System.Text;
 
 namespace org.bantu
 {
-    public interface PostRequest: USSDRequest
+    public interface MenuIndexer
     {
-        String getInputValue();
-        void setInputValue(String inputValue);
+        public void index(List<MenuItem> menuItems);
     }
 }

@@ -29,7 +29,7 @@ namespace org.bantu
 
         void setPreviousWindow(String windowName);
 
-        String getPreviousWindow(String windowName);
+        String getPreviousWindow();
 
         void close();
     }

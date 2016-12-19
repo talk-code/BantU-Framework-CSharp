@@ -25,7 +25,5 @@ namespace org.bantu
 
         String getStatus();
         void setStatus(String value);
-
-        static object ERROR_STATUS { get; set; }
     }
 }

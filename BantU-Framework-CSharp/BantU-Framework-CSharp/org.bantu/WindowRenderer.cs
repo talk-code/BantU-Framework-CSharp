@@ -5,9 +5,8 @@ using System.Text;
 
 namespace org.bantu
 {
-    public interface PostRequest: USSDRequest
+    public interface WindowRenderer
     {
-        String getInputValue();
-        void setInputValue(String inputValue);
+        String render(Window renderable, USSDResponse response);
     }
 }
