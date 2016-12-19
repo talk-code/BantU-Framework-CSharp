@@ -1,3 +1,0 @@
-C:\Users\loop\Documents\Git\BantU-Framework-CSharp\BantU-Framework-CSharp\BantU-Framework-CSharp\obj\Debug\BantU-Framework-CSharp.dll
-C:\Users\loop\Documents\Git\BantU-Framework-CSharp\BantU-Framework-CSharp\BantU-Framework-CSharp\obj\Debug\BantU-Framework-CSharp.pdb
-C:\Users\loop\Documents\Git\BantU-Framework-CSharp\BantU-Framework-CSharp\BantU-Framework-CSharp\obj\Debug\BantU-Framework-CSharp.csprojResolveAssemblyReference.cache
