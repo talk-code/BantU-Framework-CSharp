@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 
 namespace org.bantu
 {
@@ -27,14 +28,56 @@ namespace org.bantu
                 if(sessionProvider == null)
                     throw new BantUException(String.Format("The instance must not be null")); // ToDo: Implement as is in Java
 
-                request.setApplication(application);
-                ussdResponse.setSession(session);
+                ussdSession = sessionProvider.getSession(request);
+                if(ussdSession==null)
+                    throw new NullReferenceException(String.Format("The %s instance returned by %s must not be null"));
+            }
 
-                if (!application.getFilters().Contains(CoreFilter))
+            request.setApplication(application);
+            ussdResponse.setSession(session);
+
+            if (!application.getFilters().Contains(CoreFilter))
+            {
+                application.getFilters().Add(CoreFilter);
+            }
+
+            USSDFilteringChain chain = createFilteringChain(application);
+            chain.proceed(request, ussdSession, ussdResponse);
+
+            if (request is GetRequest || request is PostRequest)
+            {
+                if (ussdResponse.getWindow().isForm())
+                    ussdResponse.setResponseType(ResponseType.FORM);
+                else
+                    ussdResponse.setResponseType(ResponseType.MESSAGE);
+            }
+            else
+            {
+                ussdResponse.setResponseType(ResponseType.MESSAGE);
+            }
+
+            if (ussdResponse.getResponseType() == ResponseType.FORM)
+            {
+                BaseNavigationCache navigationCache = (BaseNavigationCache)application.getNavigationCache();
+
+                if (navigationCache != null)
                 {
-                    application.getFilters().Add(CoreFilter);
+                    try
+                    {
+                        navigationCache.storeWindow(ussdResponse.getWindow(), request, session);
+                    }
+                    catch (Exception ex)
+                    {
+                        throw new WindowStoreFailedException(ussdResponse.getWindow().getId(), request, ussdResponse, session);
+                    }
+                }
+                else
+                {
+                    ussdSession.close();
                 }
             }
+
+            return ussdResponse;
         }
 
         private static USSDFilteringChain createFilteringChain(USSDApplication application)
@@ -45,7 +88,18 @@ namespace org.bantu
                 filters.Add(f);
             }
 
-            USSDFilteringChain chain = new BaseUSSDFilteringChain();
+            BaseUSSDFilteringChain chain = new BaseUSSDFilteringChain();
+            chain.Filters = filters;
+
+            return chain;
+        }
+
+        public static USSDApplication getApplicationFromXML(Stream inputStream)
+        {
+
+            //TODO: Implement
+            return null;
+
         }
     }
 }
