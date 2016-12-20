@@ -42,5 +42,8 @@ namespace org.bantu
         List<String> getBaseCodes();
         void activateBaseCode(String code);
         bool canRun(String code);
+
+        NavigationCache getNavigationCache();
+        void setNavigationCache(NavigationCache navigationCache);
     }
 }

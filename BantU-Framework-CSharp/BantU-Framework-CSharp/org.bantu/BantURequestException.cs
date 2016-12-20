@@ -12,7 +12,7 @@ namespace org.bantu
         private USSDResponse response;
         private USSDSession<Object> session;
 
-        public BantURequestException(String message, USSDRequest request, USSDResponse response, USSDSession<Type> session)
+        public BantURequestException(String message, USSDRequest request, USSDResponse response, USSDSession<Object> session)
             :base(message)
         {
             this.request = request;
@@ -20,7 +20,7 @@ namespace org.bantu
             this.session = session;
         }
 
-        public BantURequestException(String message, USSDRequest request, USSDResponse response, USSDSession<Type> session, Exception cause)
+        public BantURequestException(String message, USSDRequest request, USSDResponse response, USSDSession<Object> session, Exception cause)
             : base(message, cause)
         {
             this.request = request;

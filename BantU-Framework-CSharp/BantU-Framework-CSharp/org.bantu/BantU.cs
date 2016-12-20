@@ -45,7 +45,7 @@ namespace org.bantu
                 filters.Add(f);
             }
 
-            USSDFilteringChain chain = new USSDFilteringChain();
+            USSDFilteringChain chain = new BaseUSSDFilteringChain();
         }
     }
 }
