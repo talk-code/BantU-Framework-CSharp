@@ -45,6 +45,7 @@
     <Compile Include="org.bantu\BantU.cs" />
     <Compile Include="org.bantu\BantUException.cs" />
     <Compile Include="org.bantu\BantURequestException.cs" />
+    <Compile Include="org.bantu\BaseNavigationCache.cs" />
     <Compile Include="org.bantu\BaseUSSDApplication.cs" />
     <Compile Include="org.bantu\BaseUSSDFilter.cs" />
     <Compile Include="org.bantu\BaseUSSDFilteringChain.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="org.bantu\WindowFetchFailedException.cs" />
     <Compile Include="org.bantu\WindowNotFoundException.cs" />
     <Compile Include="org.bantu\WindowRenderer.cs" />
+    <Compile Include="org.bantu\WindowStoreFailedException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
