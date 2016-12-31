@@ -6,7 +6,7 @@ using System.Text;
 namespace org.bantu
 {
 
-    class BantURequestException: BantUException
+    public class BantURequestException: BantUException
     {
         private USSDRequest request;
         private USSDResponse response;

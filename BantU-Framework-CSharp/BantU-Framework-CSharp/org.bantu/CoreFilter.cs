@@ -8,7 +8,7 @@ namespace org.bantu
 {
     public class CoreFilter: USSDFilter
     {
-        public static sealed String BACKWARD_TARGET_WINDOW = "#backward";
+        public static String BACKWARD_TARGET_WINDOW = "#backward";
 
         public void doFilter(USSDRequest request, USSDSession<Object> session, USSDResponse response, USSDFilteringChain chain)
         {
@@ -69,7 +69,7 @@ namespace org.bantu
             throw new NotImplementedException();
         }
 
-        private bool matchInput(Window currentWindow, PostRequest request, USSDSession<Type> session, USSDResponse response)
+        private bool matchInput(Window currentWindow, PostRequest request, USSDSession<Object> session, USSDResponse response)
         {
             String regExp = currentWindow.getInput().RegExp;
            
@@ -91,7 +91,7 @@ namespace org.bantu
             return true;
         }
 
-        private bool matchMenuItemsAndRedirect(Window currentWindow, PostRequest request, USSDSession<Type> session, USSDResponse response)
+        private bool matchMenuItemsAndRedirect(Window currentWindow, PostRequest request, USSDSession<Object> session, USSDResponse response)
         {
             foreach (MenuItem menuItem in currentWindow.getMenuItems())
             {
@@ -116,7 +116,7 @@ namespace org.bantu
             return false;
         }
 
-        private String whereToGo(MenuItem menuItem, USSDRequest request, USSDResponse response, USSDSession<Type> session)
+        private String whereToGo(MenuItem menuItem, USSDRequest request, USSDResponse response, USSDSession<Object> session)
         {
             if(menuItem.TargetWindow.Equals(BACKWARD_TARGET_WINDOW)){
                 if(session.getPreviousWindow() ==  null){

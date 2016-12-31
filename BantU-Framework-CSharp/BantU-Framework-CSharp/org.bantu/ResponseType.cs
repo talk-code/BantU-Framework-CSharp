@@ -5,7 +5,7 @@ using System.Text;
 
 namespace org.bantu
 {
-    enum ResponseType
+    public enum ResponseType
     {
         MESSAGE, FORM
     }

@@ -7,6 +7,6 @@ namespace org.bantu
 {
     public interface MenuIndexer
     {
-        public void index(List<MenuItem> menuItems);
+        void index(List<MenuItem> menuItems);
     }
 }

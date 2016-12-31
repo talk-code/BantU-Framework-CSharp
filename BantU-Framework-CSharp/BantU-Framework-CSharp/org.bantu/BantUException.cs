@@ -5,7 +5,7 @@ using System.Text;
 
 namespace org.bantu
 {
-    class BantUException: Exception
+    public class BantUException: Exception
     {
         public BantUException(String message)
             :base(message)

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace org.bantu
 {
-    public abstract class BaseUSSDSession<Type>: Dictionary<String, Object>, USSDSession<Type>
+    public abstract class BaseUSSDSession<Object>: Dictionary<String, Object>, USSDSession<Object>
     {
         public double getDouble(String key)
         {
@@ -19,6 +19,24 @@ namespace org.bantu
 
             return 0.0;
         }
+
+        public abstract String getString(String key);
+
+        public abstract Object getId();
+
+        public abstract Object get(String key, Type t);
+
+        public abstract void saveSession();
+
+        public abstract String getCurrentWindow();
+
+        public abstract void setCurrentWindow(String windowName);
+
+        public abstract void setPreviousWindow(String windowName);
+
+        public abstract String getPreviousWindow();
+
+        public abstract void close();
 
         public bool Is(String key)
         {
@@ -69,7 +87,7 @@ namespace org.bantu
             {
                 if (this.ContainsKey(key))
                 {
-                    return (T) this[key];
+                    //return (T)this[key];
                 }
             }
             catch (Exception ex) { }

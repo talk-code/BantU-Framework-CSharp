@@ -9,9 +9,9 @@ using System.Text;
 
 namespace org.bantu
 {
-    public interface USSDSession<Type>: IDictionary<String, Object>
+    public interface USSDSession<Object>: IDictionary<String, Object>
     {
-        Type getId();
+        Object getId();
         double getDouble(String key);
         bool Is(String key);
         bool getBoolean(String key);
@@ -19,7 +19,7 @@ namespace org.bantu
         int getInt(String key);
         long getLong(String key);
 
-        T get<T>(String key, Type t);
+        Object get(String key, Type t);
 
         void saveSession();
 

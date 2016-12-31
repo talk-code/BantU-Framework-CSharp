@@ -52,6 +52,7 @@
     <Compile Include="org.bantu\BaseUSSDResponse.cs" />
     <Compile Include="org.bantu\BaseUSSDSession.cs" />
     <Compile Include="org.bantu\BasicGetRequest.cs" />
+    <Compile Include="org.bantu\BasicPostRequest.cs" />
     <Compile Include="org.bantu\BasicSession.cs" />
     <Compile Include="org.bantu\BasicSessionProvider.cs" />
     <Compile Include="org.bantu\BasicUSSDRequest.cs" />

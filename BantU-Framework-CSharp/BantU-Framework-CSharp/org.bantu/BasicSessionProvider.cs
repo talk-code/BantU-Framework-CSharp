@@ -16,7 +16,7 @@ namespace org.bantu
         {
         }
 
-        public BasicSession getSession(USSDRequest request)
+        public USSDSession<Object> getSession(USSDRequest request)
         {
             BasicSession bSession = new BasicSession();
 
@@ -24,7 +24,7 @@ namespace org.bantu
                 sessions.Add(request.getMSISDN(), bSession);
             }
 
-            return sessions[request.getMSISDN()];
+            return (USSDSession<Object>) sessions[request.getMSISDN()];
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace org.bantu
 {
-    public class NavigationCache
+    public interface NavigationCache
     {
         void storeWindow(Window window, USSDRequest request, USSDSession<Object> session);
         Window fetchWindow(String windowId, USSDRequest request, USSDSession<Object> session);

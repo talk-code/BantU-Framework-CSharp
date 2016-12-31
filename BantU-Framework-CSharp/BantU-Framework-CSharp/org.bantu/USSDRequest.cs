@@ -12,10 +12,10 @@ namespace org.bantu
     public interface USSDRequest
     {
         String getMSISDN();
-        void setMSIDN(String MSISDN);
+        void setMSISDN(String MSISDN);
 
         String getMCC();
-        void setMCC();
+        void setMCC(String mcc);
 
         String getCID();
         void setCID(String value);
@@ -26,7 +26,7 @@ namespace org.bantu
         void setAttachment(Object attachment);
         Object getAttachment();
 
-        void redirectTo(String windowName, USSDSession<Type> session, USSDResponse response);
+        void redirectTo(String windowName, USSDSession<Object> session, USSDResponse response);
 
         void setApplication(USSDApplication application);
 

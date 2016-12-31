@@ -25,6 +25,21 @@ namespace org.bantu
             this.sessionProvider = new BasicSessionProvider();
         }
 
+        public Service getService(String id)
+        {
+            return services[id];
+        }
+
+        public SessionProvider getSessionProvider()
+        {
+            return sessionProvider;
+        }
+
+        public void setSessionProvider(SessionProvider provider)
+        {
+            this.sessionProvider = provider;
+        }
+
         public void addWindowFilter(String windowName, USSDFilter filter)
         {
             if (windowFilters.Keys.Contains(windowName))
@@ -89,7 +104,49 @@ namespace org.bantu
                 return windows[windowId];
 
             return null;
+        }
 
+        public USSDRequest newRequest(String str)
+        {
+            if (str == null || str.Length == 0)
+                throw new BantUException("Request cannot be null or null");
+
+            if (canRun(str.Trim()))
+            {
+                BasicGetRequest request = new BasicGetRequest();
+                request.setApplication(this);
+                request.setUSSDBaseCode(str.Trim());
+
+                return request;
+            }
+
+            foreach(Service service in getServices()){
+                //TODO: Generate the regular expression
+                String regExp = service.getRegularExpression();
+                //TODO: Match a service
+                //TODO: Get the values
+                //TODO: Fill the Service Request and return it
+            }
+
+            BasicPostRequest prequest = new BasicPostRequest();
+            prequest.setApplication(this);
+            prequest.setInputValue(str.Trim());
+            return prequest;
+        }
+
+        public List<String> getBaseCodes()
+        {
+            return baseCodes.Keys.ToList();
+        }
+
+        public void activateBaseCode(String code)
+        {
+            baseCodes[code] = true;
+        }
+
+        public bool canRun(String code)
+        {
+            return baseCodes.Keys.Contains(code);
         }
 
         public NavigationCache getNavigationCache()
@@ -100,6 +157,18 @@ namespace org.bantu
         public void setNavigationCache(NavigationCache navigationCache)
         {
             this.navigationCache = navigationCache;
+        }
+
+        public USSDRequest newTimeoutRequest()
+        {
+            //TODO: Create and return a Timeout Request
+            return null;
+        }
+
+        public USSDRequest newReleaseRequest()
+        {
+            //TODO: Create and return a Release Request
+            return null;
         }
     }
 }

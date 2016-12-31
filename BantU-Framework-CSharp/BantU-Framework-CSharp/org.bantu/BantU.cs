@@ -17,7 +17,7 @@ namespace org.bantu
             return executeRequest(application, request, null);
         }
 
-        protected static USSDResponse executeRequest(USSDApplication application, USSDRequest request, USSDSession<Object> session)
+        public static USSDResponse executeRequest(USSDApplication application, USSDRequest request, USSDSession<Object> session)
         {
             USSDResponse ussdResponse = new BaseUSSDResponse();
             USSDSession<object> ussdSession = session;
