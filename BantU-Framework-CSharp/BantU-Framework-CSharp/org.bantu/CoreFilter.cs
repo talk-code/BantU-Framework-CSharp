@@ -66,7 +66,10 @@ namespace org.bantu
 
         private bool regularExpressionMatches(String regexp, String value, USSDRequest request)
         {
-            throw new NotImplementedException();
+            Regex regex = new Regex(regexp);
+            Match match = regex.Match(value);
+
+            return match.Success ? true : false;
         }
 
         private bool matchInput(Window currentWindow, PostRequest request, USSDSession<Object> session, USSDResponse response)

@@ -1,0 +1,11 @@
+C:\Users\loop\Documents\Git\BantU-Framework-CSharp\BantU-Framework-CSharp\BantU-Framework-CSharp-Tests\obj\x86\Debug\BantU-Framework-CSharp-Tests.csprojResolveAssemblyReference.cache
+C:\Users\loop\Documents\Git\BantU-Framework-CSharp\BantU-Framework-CSharp\BantU-Framework-CSharp-Tests\bin\Debug\BantU-Framework-CSharp-Tests.exe.config
+C:\Users\loop\Documents\Git\BantU-Framework-CSharp\BantU-Framework-CSharp\BantU-Framework-CSharp-Tests\bin\Debug\BantU-Framework-CSharp-Tests.exe
+C:\Users\loop\Documents\Git\BantU-Framework-CSharp\BantU-Framework-CSharp\BantU-Framework-CSharp-Tests\bin\Debug\BantU-Framework-CSharp-Tests.pdb
+C:\Users\loop\Documents\Git\BantU-Framework-CSharp\BantU-Framework-CSharp\BantU-Framework-CSharp-Tests\bin\Debug\BantU-Framework-CSharp.dll
+C:\Users\loop\Documents\Git\BantU-Framework-CSharp\BantU-Framework-CSharp\BantU-Framework-CSharp-Tests\bin\Debug\nunit.framework.dll
+C:\Users\loop\Documents\Git\BantU-Framework-CSharp\BantU-Framework-CSharp\BantU-Framework-CSharp-Tests\bin\Debug\nunitlite.dll
+C:\Users\loop\Documents\Git\BantU-Framework-CSharp\BantU-Framework-CSharp\BantU-Framework-CSharp-Tests\bin\Debug\BantU-Framework-CSharp.pdb
+C:\Users\loop\Documents\Git\BantU-Framework-CSharp\BantU-Framework-CSharp\BantU-Framework-CSharp-Tests\bin\Debug\nunit.framework.xml
+C:\Users\loop\Documents\Git\BantU-Framework-CSharp\BantU-Framework-CSharp\BantU-Framework-CSharp-Tests\obj\x86\Debug\BantU-Framework-CSharp-Tests.exe
+C:\Users\loop\Documents\Git\BantU-Framework-CSharp\BantU-Framework-CSharp\BantU-Framework-CSharp-Tests\obj\x86\Debug\BantU-Framework-CSharp-Tests.pdb

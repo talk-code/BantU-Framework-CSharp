@@ -84,7 +84,7 @@ namespace org.bantu
 
         public List<Service> getServices()
         {
-            throw new NotImplementedException();
+            return this.services.Values.ToList();
         }
 
         public String getStartupWindowId()

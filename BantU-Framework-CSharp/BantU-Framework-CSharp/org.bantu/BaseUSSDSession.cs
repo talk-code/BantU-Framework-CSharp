@@ -5,7 +5,7 @@ using System.Text;
 
 namespace org.bantu
 {
-    public abstract class BaseUSSDSession<Object>: Dictionary<String, Object>, USSDSession<Object>
+    public abstract class BaseUSSDSession<T>: Dictionary<String, T>, USSDSession<T>
     {
         public double getDouble(String key)
         {
@@ -22,9 +22,9 @@ namespace org.bantu
 
         public abstract String getString(String key);
 
-        public abstract Object getId();
+        public abstract T getId();
 
-        public abstract Object get(String key, Type t);
+        public abstract T get(String key, Type t);
 
         public abstract void saveSession();
 
@@ -81,18 +81,18 @@ namespace org.bantu
             return 0;
         }
 
-        public T get<T>(String key, Type type)
-        {
-            try
-            {
-                if (this.ContainsKey(key))
-                {
-                    //return (T)this[key];
-                }
-            }
-            catch (Exception ex) { }
+        //public T get<T>(String key, Type type)
+        //{
+        //    try
+        //    {
+        //        if (this.ContainsKey(key))
+        //        {
+        //            //return (T)this[key];
+        //        }
+        //    }
+        //    catch (Exception ex) { }
 
-            return default(T);
-        }
+        //    return default(T);
+        //}
     }
 }

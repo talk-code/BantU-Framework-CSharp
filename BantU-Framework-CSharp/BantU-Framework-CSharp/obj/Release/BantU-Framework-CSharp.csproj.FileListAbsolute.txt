@@ -1,0 +1,5 @@
+C:\Users\loop\Documents\Git\BantU-Framework-CSharp\BantU-Framework-CSharp\BantU-Framework-CSharp\obj\Release\BantU-Framework-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\loop\Documents\Git\BantU-Framework-CSharp\BantU-Framework-CSharp\BantU-Framework-CSharp\bin\Release\BantU-Framework-CSharp.dll
+C:\Users\loop\Documents\Git\BantU-Framework-CSharp\BantU-Framework-CSharp\BantU-Framework-CSharp\bin\Release\BantU-Framework-CSharp.pdb
+C:\Users\loop\Documents\Git\BantU-Framework-CSharp\BantU-Framework-CSharp\BantU-Framework-CSharp\obj\Release\BantU-Framework-CSharp.dll
+C:\Users\loop\Documents\Git\BantU-Framework-CSharp\BantU-Framework-CSharp\BantU-Framework-CSharp\obj\Release\BantU-Framework-CSharp.pdb
